@@ -1,25 +1,30 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import Greeting from './Greeting'
+import { v1 } from 'uuid'
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: Array<String> 
+    addUserCallback: (name: object)=>void
 }
 
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
 
-// более современный и удобный для про :)
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+    const [name, setName] = useState<string>('') 
+    const [error, setError] = useState<string>('') 
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('') // need to fix
+    const setNameCallback = (e:ChangeEvent<HTMLInputElement>) => { 
+        setName(e.currentTarget.value)
     }
-    const addUser = () => {
-        alert(`Hello  !`) // need to fix
+    const addUser = (name:string) => {
+        alert(`Hello`+{name}+ `!`) // need to fix
+        let newUser={
+            _id: v1(),
+            name: name,
+        }
+        addUserCallback(newUser)
+
+
     }
 
     const totalUsers = 0 // need to fix
