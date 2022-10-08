@@ -22,23 +22,24 @@ function HW4() {
     return (
         <div>
             <hr/>
-            homeworks 4
-
+          <b>homeworks 4</b> 
+        <div className={s.row}>
             <div className={s.column}>
                 <SuperInputText
                     value={text}
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
+                    className={s.disabled} 
                     // spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
                     className={s.blue} // проверьте, рабоет ли смешивание классов
                 />
-
+   </div>
                 {/*----------------------------------------------------*/}
-
+                <div className={s.column}>
                 <SuperButton>
                     default
                 </SuperButton>
@@ -53,9 +54,9 @@ function HW4() {
                 <SuperButton disabled>
                     disabled
                 </SuperButton>
-
+                </div>
                 {/*----------------------------------------------------*/}
-
+                <div className={s.column}>
                 <SuperCheckbox
                     checked={checked}
                     onChangeChecked={setChecked}
@@ -64,9 +65,10 @@ function HW4() {
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
-            </div>
-
+                <SuperCheckbox  checked={checked} onChange={testOnChange}/>
+         
+                </div>
+                </div>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperInputText/>*/}

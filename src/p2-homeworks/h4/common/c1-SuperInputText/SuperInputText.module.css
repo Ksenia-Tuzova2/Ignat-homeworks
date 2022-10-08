@@ -1,12 +1,18 @@
-.superInput {
 
+.superInput {
+    background-color: rgb(175, 175, 175);
+    border: none;
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    border: 1px solid rgb(255, 0, 0);
+    
 }
 
 .error {
     color: red;
+}
+
+.blue{
+    background-color: blue;
 }

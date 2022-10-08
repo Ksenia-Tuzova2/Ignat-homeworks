@@ -1,3 +1,14 @@
 .App {
 
 }
+a{
+  display:inline;
+  color: black;
+  text-decoration: none;
+  padding: 0 10px ;
+
+}
+.link{
+
+/* font-size: 30px; */
+}
