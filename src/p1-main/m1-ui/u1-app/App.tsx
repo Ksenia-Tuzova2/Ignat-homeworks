@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './App.module.css'
 
 import Pages from '../../../p2-homeworks/h5-rrd-v6/Pages';

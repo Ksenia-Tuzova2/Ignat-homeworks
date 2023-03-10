@@ -52,6 +52,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
 
     return (
         <>
+        {/* доделать эти приколы с переключалкой */}
             {editMode
                 ? (
                     <SuperInputText
